@@ -7,20 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet' href="https://bootswatch.com/3/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="css/newStyle.css">
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
         crossorigin='anonymous'>
     </script>
     <title>Friend Finder</title>
 </head>
 
+<!-- source of questions -->
+<!-- https://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/ten-item-personality-inventory-tipi/ -->
+
 <body>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <form role="form">
-
-
-
 
                     <h2>Survey Questions</h2>
                     <hr>
@@ -36,169 +37,167 @@
                     <hr>
 
                     <h3>
-                        <strong>How do you compare to the following characteristics?</strong>
+                        <strong>How do you compare yourself to the following characteristics?</strong>
                     </h3>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <table class="table-striped">
-                                <tr>
-                                    <td>
-                                        <h4>Extraverted, enthusiastic</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q1">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Critical, quarrelsome</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q2">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Dependable, self-disciplined</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q3">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Anxious, easily upset</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q4">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Open to new experiences, complex</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q5">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Reserved, quiet</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q6">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Sympathetic, warm</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q7">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Disorganized, careless</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q8">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Calm, emotionally stable</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q9">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h4>Conventional, uncreative</h4>
-                                    </td>
-                                    <td>
-                                        <select class="chosen-select" id="q10">
-                                            <option value=""></option>
-                                            <option value="1">1 (Strongly Disagree)</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5 (Strongly Agree)</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary btn-block submit">Submit
-                            <i class="glyphicon glyphicon-ok"></i>
-                        </button>
-                    </div>
+                    <table class="table-striped">
+                        <tr>
+                            <td>
+                                <h4>Extraverted, enthusiastic</h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q1">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Critical, quarrelsome</h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q2">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Dependable, self-disciplined</h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q3">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Anxious, easily upset</h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q4">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Open to new experiences, complex </h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q5">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Reserved, quiet</h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q6">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Sympathetic, warm</h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q7">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Disorganized, careless</h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q8">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Calm, emotionally stable</h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q9">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>Conventional, uncreative</h4>
+                            </td>
+                            <td>
+                                <select class="chosen-select" id="q10">
+                                    <option value=""></option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block submit">Submit
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </button>
+
                 </form>
 
                 <hr>
@@ -212,46 +211,102 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="response">
+
+                </div>
+
+                <div id="match-modal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">X</button>
+                                <h3>Your Friend Match!</h3>
+                            </div>
+                            <div class="modal-body">
+                                <h4 id="match-name"></h4>
+                                <img id="match-image">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="close" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-    </div>
-    </div>
+
+
+    <script type="text/javascript">
+        var bestFriend = [];
+        $(".submit").on("click", function (event) {
+            event.preventDefault();
+            var friendScores = [];
+
+            for (var i = 1; i < 11; i++) {
+                var num = parseInt($(`#q${i}`).val().trim());
+                friendScores.push(num);
+            };
+
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: friendScores
+            };
+            console.log(newFriend);
+
+            var pathURL = window.location.origin;
+
+            $.post("/api/friendsList", newFriend, function (data) {
+
+                // clear the form
+                $("#name").val("");
+                $("#photo").val("");
+                for (var j = 1; j < 11; j++) {
+                    $(`#q${j}`).val("");
+                };
+            })
+
+            $.ajax({
+                url: `${pathURL}/api/friendsList`,
+                method: "GET"
+            })
+            .done(function (res) {
+                
+                console.log(res);
+
+                // initialize score value to check the difference against
+                var score = 50;
+
+                // double for loop to iterate through all of the friends and 
+                // then to iterate through the responses of each of the friends
+                // use (res.length - 1) so it doesn't say you are your own best friend
+                for (var i = 0; i < res.length - 1; i++) {
+                    var diffArray = [];
+
+                    for (var j = 0; j < 10; j++) {
+                        diffArray[j] = Math.abs(res[i].scores[j] - friendScores[j]);
+                    }
+                    const reducer = (accumulator, currentValue) => accumulator +
+                        currentValue;
+                    var scoreCheck = diffArray.reduce(reducer);
+                    console.log(scoreCheck);
+
+                    if (scoreCheck < score) {
+                        bestFriend = res[i];
+                        score = scoreCheck;
+                    };
+                }
+
+                $(".response").html(`<h1>Your new best friend is:</h1>
+                <h3>${bestFriend.name}</h3>
+                <img src=${bestFriend.photo}>`);
+
+            });
+        });
+    </script>
 </body>
 
 </html>
-
-<script type="text/javascript">
-    $(".submit").on("click", function (event) {
-        event.preventDefault();
-        var friendScores = [];
-        for (var i = 1; i < 11; i++) {
-            var num = parseInt($(`#q${i}`).val().trim());
-            friendScores.push(num);
-        };
-
-        var newFriend = {
-            name: $("#name").val().trim(),
-            photo: $("#photo").val().trim(),
-            scores: friendScores
-        };
-
-        console.log(newFriend);
-
-        $.post("/api/friendsList", newFriend, function (data) {
-            if (data) {
-                alert("Success!!");
-            } else {
-                alert("Try again :(")
-            };
-
-            $("#name").val("");
-            $("#photo").val("");
-
-            for (var j = 1; j < 11; j++) {
-                $(`#q${j}`).val("");
-            };
-
-        });
-    });
-</script>

@@ -3,9 +3,12 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 var app = express();
-var PORT = 3000;
-app.use(bodyParser.urlencoded({ extended: false }));
+var PORT = process.env.PORT || 3000;
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// to serve static files, like newStyle.css
+app.use(express.static(path.join(__dirname, 'app/public')));
 
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
