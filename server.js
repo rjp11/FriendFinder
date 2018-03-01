@@ -7,7 +7,7 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// to serve static files, like newStyle.css
+// to serve static files, like newStyle.css:
 app.use(express.static(path.join(__dirname, 'app/public')));
 
 require("./app/routing/apiRoutes")(app);
