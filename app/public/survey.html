@@ -212,7 +212,7 @@
                     </div>
                 </div>
 
-                <div class="response">
+                <div id="response">
 
                 </div>
 
@@ -223,7 +223,7 @@
 
 
     <script type="text/javascript">
-        var bestFriend = [];
+        
         $(".submit").on("click", function (event) {
             event.preventDefault();
             var friendScores = [];
@@ -242,7 +242,7 @@
 
             var pathURL = window.location.origin;
 
-            $.post("/api/friendsList", newFriend, function (data) {
+            $.post("/api/friendsList", newFriend, function (bestFriend) {
 
                 // clear the form
                 $("#name").val("");
@@ -250,44 +250,17 @@
                 for (var j = 1; j < 11; j++) {
                     $(`#q${j}`).val("");
                 };
-            })
 
-            $.ajax({
-                url: `${pathURL}/api/friendsList`,
-                method: "GET"
-            })
-            .done(function (res) {
-                
-                console.log(res);
 
-                // initialize score value to check the difference against
-                var score = 50;
+                console.log(bestFriend);
 
-                // double for loop to iterate through all of the friends and 
-                // then to iterate through the responses of each of the friends
-                // use (res.length - 1) so it doesn't say you are your own best friend
-                for (var i = 0; i < res.length - 1; i++) {
-                    var diffArray = [];
-
-                    for (var j = 0; j < 10; j++) {
-                        diffArray[j] = Math.abs(res[i].scores[j] - friendScores[j]);
-                    }
-                    const reducer = (accumulator, currentValue) => accumulator +
-                        currentValue;
-                    var scoreCheck = diffArray.reduce(reducer);
-                    console.log(scoreCheck);
-
-                    if (scoreCheck < score) {
-                        bestFriend = res[i];
-                        score = scoreCheck;
-                    };
-                }
-
-                $(".response").html(`<h1>Your new best friend is:</h1>
+                $("#response").html(
+                    `<h1>Your new best friend is:</h1>
                 <h3>${bestFriend.name}</h3>
-                <img src=${bestFriend.photo}>`);
+                <img src=${bestFriend.photo}>`
+                );
 
-            });
+            })
         });
     </script>
 </body>
