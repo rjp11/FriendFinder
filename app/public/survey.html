@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet' href="https://bootswatch.com/3/yeti/bootstrap.min.css">
-    <link rel="stylesheet" href="css/newStyle.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
         crossorigin='anonymous'>
     </script>
@@ -194,7 +194,7 @@
                     </table>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="btn btn-primary btn-block submit">Submit
+                    <button type="submit" class="btn btn-primary btn-block" id="submit">Submit
                         <i class="glyphicon glyphicon-ok"></i>
                     </button>
 
@@ -212,7 +212,16 @@
                     </div>
                 </div>
 
-                <div id="response">
+                <div id="modal">
+
+                    <div class="modal-content text-center">
+                        <h3>We think you two could be besties!</h3>
+                        
+                        <!-- Placeholder for Image -->
+                        <img class="matchImg" src="">
+                        <!-- Placeholder for Name -->
+                        <h4 class="matchName"></h4>
+                    </div>
 
                 </div>
 
@@ -223,8 +232,7 @@
 
 
     <script type="text/javascript">
-        
-        $(".submit").on("click", function (event) {
+        $("#submit").on("click", function (event) {
             event.preventDefault();
             var friendScores = [];
 
@@ -254,14 +262,28 @@
 
                 console.log(bestFriend);
 
-                $("#response").html(
-                    `<h1>Your new best friend is:</h1>
-                <h3>${bestFriend.name}</h3>
-                <img src=${bestFriend.photo}>`
-                );
+                $(".matchName").html(`${bestFriend.name}`);
+                $(".matchImg").attr('src', `${bestFriend.photo}`);
 
             })
         });
+
+        var modal = document.getElementById('modal');
+        var btn = document.getElementById("submit");
+
+        window.onload = function () {
+            modal.style.display = "none";
+        };
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 
