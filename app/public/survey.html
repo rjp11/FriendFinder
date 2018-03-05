@@ -216,22 +216,19 @@
 
                     <div class="modal-content text-center">
                         <h3>We think you two could be besties!</h3>
-                        
+
                         <!-- Placeholder for Image -->
                         <img class="matchImg" src="">
                         <!-- Placeholder for Name -->
                         <h4 class="matchName"></h4>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
 
-
-
     <script type="text/javascript">
+
         $("#submit").on("click", function (event) {
             event.preventDefault();
             var friendScores = [];
@@ -259,31 +256,33 @@
                     $(`#q${j}`).val("");
                 };
 
-
                 console.log(bestFriend);
 
                 $(".matchName").html(`${bestFriend.name}`);
                 $(".matchImg").attr('src', `${bestFriend.photo}`);
 
-            })
+            });
         });
 
         var modal = document.getElementById('modal');
         var btn = document.getElementById("submit");
 
+        // guarantees modal is not displayed on page load
         window.onload = function () {
             modal.style.display = "none";
         };
 
+        // display modal on submit click
         btn.onclick = function () {
             modal.style.display = "block";
         };
 
+        // click outside of the modal to close
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-        }
+        };
     </script>
 </body>
 
